@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofoliu</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Stiluri generale */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f3c88, #4e7ac7);
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            min-height: 100vh;        /* 1. Forțează pagina să aibă cel puțin înălțimea ecranului */
+            display: flex;            /* 2. Activează Flexbox */
+            flex-direction: column;
+        }
+
+        /* Bara de navigatie */
+        nav {
+            /* Adaugat comentariu  */
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            padding: 18px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-left: 0;
+            
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1; /* Permite link-urilor să ocupe spatiul */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 12px;
+            padding: 10px 22px;
+            border-radius: 25px;
+            transition: 0.35s ease;
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #1f3c88;
+        }
+
+        /* Containerul de Portofoliu */
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .portfolio-container h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 36px;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #fff;
+            display: inline-block;
+            padding-bottom: 10px;
+            width: 100%;
+        }
+
+        /* Grila de Proiecte (Layout) */
+        .project-grid {
+            /* Folosim Grid pentru un layout ordonat */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #ffffff;
+            color: #222;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            color: #1f3c88;
+            margin-top: 0;
+        }
+
+        .project-info p {
+            font-size: 14px;
+        }
+
+        .project-link {
+            display: block;
+            margin-top: 15px;
+            color: #4e7ac7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+         /* Footer */
+        footer {
+            background: #123456;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto; /* Impinge footer-ul jos */
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #4e7ac7;
+        }
+        
+        /* Media Query pentru Responsivitate  */
+        @media (max-width: 600px) {
+            .project-grid {
+                /* Pe mobile, o singura coloana */
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+     <nav>
+        <div class="logo">O. Toderașc</div>
+        <div class="nav-links">
+            <a href="home.html">Acasă</a>
+            <a href="CV_Toderasc_Octavian.html">CV</a>
+            <a href="portofolio.html">Portofoliu</a> <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="portfolio-container">
+        <h1>Proiecte Personale</h1>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                                <div class="project-info">
+                    <h3>Game of Life (Simulare C)</h3>
+                    <p>Implementare a algoritmului Game of Life cu structuri de date optimizate în C (arbore binar, stivă reutilizabilă).</p>
+                    <p><strong>Tehnologii:</strong> C, Analiză Algoritmică</p>
+                    <a class="project-link" href="https://github.com/Tavi-Tod/game_of_life" target="_blank">Vezi Codul <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                                 <div class="project-info">
+                    <h3>Website Personal (HTML/CSS)</h3>
+                    <p>Proiectul curent de website, cu accent pe design responsive și UI/UX conform bunelor practici.</p>
+                    <p><strong>Tehnologii:</strong> HTML, CSS </p>
+                    <a class="project-link" href="#" target="_blank">Vezi Codul <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                                 <div class="project-info">
+                    <h3>Dungeon Chronicles (RPG C++ & WebAssembly))</h3>
+                    <p>Dezvoltarea unui joc RPG turn-based complet, rulând cod nativ C++ direct în browser prin intermediul WebAssembly. Arhitectură OOP robustă pentru logica de joc (backend), integrată cu o interfață grafică web modernă și responsivă.</p>
+                    <p><strong>Tehnologii:</strong> C++, WebAssembly (Emscripten), HTML5, CSS3, JavaScript </p>
+                    <a class="project-link" href="https://github.com/Tavi-Tod/Dungeon-Chronicles" target="_blank">Vezi Codul <i class="fab fa-github"></i></a>
+                    <a class="project-link" href="https://dungeon-chronicles.netlify.app/" target="_blank">Joacă acum <i class="fab fa-google"></i></a>
+                </div>
+            </div>
+
+            
+            
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://github.com/Tavi-Tod" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="www.linkedin.com/in/octavian-toderasc-0710152bb" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:tavi.toderasc@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2025 Toderașc Octavian-Gabriel. Toate drepturile rezervate.</p>
+    </footer>
+
+</body>
+</html>

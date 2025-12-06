@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Stiluri generale */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f3c88, #4e7ac7);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Bara de navigatie */
+        nav {
+            /* Adaugat comentariu  */
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            padding: 18px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-left: 0;
+            
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1; /* Permite link-urilor să ocupe spatiul */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 12px;
+            padding: 10px 22px;
+            border-radius: 25px;
+            transition: 0.35s ease;
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #1f3c88;
+        }
+
+        /* Containerul principal de contact */
+        .contact-container {
+            width: 85%;
+            margin: 80px auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            flex: 1;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.12);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 20px rgba(0,0,0,0.16);
+        }
+
+        h2 {
+            color: #1f3c88;
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            font-size: 22px;
+            margin: 12px 0;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .card i {
+            color: #1f3c88;
+            margin-right: 12px;
+            font-size: 24px;
+            vertical-align: middle;
+        }
+
+        .card a {
+            color: #1f3c88;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Formular */
+        input, textarea {
+            width: 95%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #1f3c88;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #274ea6;
+        }
+
+         /* Footer */
+        footer {
+            background: #123456;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto; /* Impinge footer-ul jos */
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #4e7ac7;
+        }
+        
+        /* Media Query pentru Responsivitate  */
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column; /* Stiva cardurile pe verticala pe ecranele mici */
+                width: 90%;
+                margin: 40px auto;
+            }
+
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav>
+        <div class="logo">O. Toderașc</div>
+        <div class="nav-links">
+            <a href="home.html">Acasă</a>
+            <a href="CV_Toderasc_Octavian.html">CV</a>
+            <a href="portofolio.html">Portofoliu</a> <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="contact-container">
+
+        <div class="card">
+            <h2>Informații de Contact</h2>
+            <p><i class="fas fa-envelope"></i><b>Email:</b> tavi.toderasc@gmail.com</p>
+            <p><i class="fas fa-phone"></i><b>Telefon:</b> 0742 497 296</p>
+            <p><i class="fab fa-github"></i><b>GitHub:</b>
+                <a href="https://github.com/Tavi-Tod" target="_blank">Profil</a>
+            </p>
+            <p><i class="fab fa-linkedin"></i><b>Linkedin:</b>
+                <a href="www.linkedin.com/in/octavian-toderasc-0710152bb" target="_blank">Profil</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Trimite-mi un mesaj!</h2>
+            <form action="mailto:tavi.toderasc@gmail.com" method="POST" enctype="text/plain">
+                <input type="text" name="Nume" placeholder="Nume complet" required>
+                <input type="email" name="Email" placeholder="Email" required>
+                <textarea name="Mesaj" placeholder="Mesajul tău" rows="5" required></textarea>
+                <button type="submit">Trimite</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://github.com/Tavi-Tod" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="www.linkedin.com/in/octavian-toderasc-0710152bb" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:tavi.toderasc@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2025 Toderașc Octavian-Gabriel. Toate drepturile rezervate.</p>
+    </footer>
+
+</body>
+</html>

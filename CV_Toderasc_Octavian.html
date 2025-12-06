@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Toderașc Octavian-Gabriel</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Stiluri generale */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #1f3c88, #4e7ac7);
+        }
+        
+        /* Bara de navigare */
+        nav {
+            /* Adaugat comentariu  */
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: space-between;
+            padding: 18px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-left: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1; /* Permite link-urilor să ocupe spatiul */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 12px;
+            padding: 10px 22px;
+            border-radius: 25px;
+            transition: 0.35s ease;
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #1f3c88;
+        }
+
+        .cv-container {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        /* Coloana stanga */
+        .left-column {
+            width: 30%;
+            background-color: #123456;
+            color: white;
+            padding: 40px 25px;
+        }
+
+        .left-column img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px auto;
+            border: 4px solid white;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 30px;
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 10px 0;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        .icon {
+            margin-right: 8px;
+        }
+
+        /* Coloana dreapta */
+        .right-column {
+            width: 70%;
+            padding: 40px;
+            background-color: white;
+        }
+
+        .name-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #123456;
+        }
+
+        .job-title {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #123456;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        .section-title {
+            color: #123456;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 25px;
+            border-bottom: 2px solid #123456;
+            padding-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .experience-block {
+            margin-bottom: 20px;
+        }
+
+        .experience-block h4 {
+            margin: 5px 0;
+            font-weight: bold;
+            color: #123456;
+        }
+
+        .experience-block span {
+            float: right;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .download-area {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            text-align: center;
+            padding: 12px 20px;
+            width: 170px;
+            font-size: 15px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            background-color: #123456;
+            border: 2px solid #123456;
+            border-radius: 20px;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: #123456;
+        }
+        /* Footer */
+        footer {
+            background: #123456;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto; /* Impinge footer-ul jos */
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #4e7ac7;
+        }
+        
+        /* Media Query pentru Responsivitate  */
+        @media (max-width: 768px) {
+            .cv-container {
+                flex-direction: column; /* Stiva coloanele pe verticala pe ecranele mici */
+            }
+
+            .left-column, .right-column {
+                width: 100%; /* Ocupă latimea maxima */
+                padding: 20px;
+            }
+
+            .right-column {
+                padding-top: 10px; /* Reducere padding intre coloane */
+            }
+            
+            nav {
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">O. Toderașc</div>
+        <div class="nav-links">
+            <a href="home.html">Acasă</a>
+            <a href="CV_Toderasc_Octavian.html">CV</a>
+            <a href="portofolio.html">Portofoliu</a> <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="cv-container">
+
+        <div class="left-column">
+            <img src="poza_cv.jpg" alt="Poză profil">
+
+            <h2><i class="fa-solid fa-address-book icon"></i>Contact</h2>
+            <ul>
+                <li><i class="fa-solid fa-phone icon"></i>+40 742 497 296</li>
+                <li><i class="fa-solid fa-envelope icon"></i>tavi.toderasc@gmail.com.com</li>
+                <li><i class="fa-solid fa-location-dot icon"></i>Vrancea, România</li>
+            </ul>
+
+            <h2><i class="fa-solid fa-graduation-cap icon"></i>Educație</h2>
+            <ul>
+                <li>2024 - Prezent<br>Facultatea de Automatică și Calculatoare<br>Ingineria Sistemelor</li>
+                <li>2020 - 2024<br>Colegiul Național Emil Botta<br>Matematică Informatică</li>
+            </ul>
+
+            <h2><i class="fa-solid fa-code icon"></i>Competențe</h2>
+            <ul>
+                <li>C: Nivel avansat</li>
+                <li>C++: Nivel avansat</li>
+                <li>Python: Nivel începător</li>
+                <li>HTML, CSS: Nivel avansat</li>
+                <li>Modelare și simulare sisteme</li>
+                <li>Lucru cu microcontrolere embedded</li>
+                <li>AI și Securitate Cibernetică</li>
+            </ul>
+
+            <h2><i class="fa-solid fa-language icon"></i>Limbi</h2>
+            <ul>
+                <li>Română: Nativ</li>
+                <li>Engleză: Avansat</li>
+                <li>Franceză: Începător</li>
+            </ul>
+        </div>
+
+        <div class="right-column">
+            <div class="name-title">Toderașc Octavian-Gabriel</div>
+            <div class="job-title">Student Ingineria Sistemelor</div>
+
+            <div class="section-title"><i class="fa-solid fa-user icon"></i>Profil</div>
+            <p>
+                Student motivat în domeniul Ingineriei Sistemelor, orientat spre dezvoltarea de soluții tehnice care
+                îmbină automatizarea cu software-ul inteligent. Interes puternic pentru proiectarea de sisteme,
+                optimizare și control, cu focus pe performanță și calitate inginerească.
+            </p>
+
+            <div class="section-title"><i class="fa-solid fa-briefcase icon"></i>Experiență și Proiecte</div>
+
+            <div class="experience-block">
+                <h4>Dungeon Chronicles – Motor RPG C++ cu execuție WebAssembly</h4>
+                <span>2025</span>
+                <ul>
+                    <li>Dezvoltarea logicii centrale a jocului în C++ nativ, utilizând principii OOP (Moștenire, Polimorfism) pentru o arhitectură modulară a entităților.</li>
+                    <li>Compilarea codului sursă în WebAssembly folosind Emscripten pentru a permite execuția de înaltă performanță direct în browser.</li>
+                    <li>Implementarea unui mecanism de comunicare (binding) eficient între backend-ul C++ și interfața frontend (HTML/CSS/JavaScript) pentru randare în timp real.</li>
+                    <li>Proiectarea sistemului de luptă pe ture, a economiei jocului și a gestionării stărilor (State Management) fără a utiliza biblioteci externe de gaming.</li>
+                </ul>
+            </div>
+
+            <div class="experience-block">
+                <h4>Website de prezentare HTML/CSS</h4>
+                <span>2025</span>
+                <ul>
+                    <li>Proiectare interfață responsive.</li>
+                    <li>Accent pe accesibilitate și funcționalitate.</li>
+                </ul>
+            </div>
+
+            <div class="experience-block">
+                <h4>Game of Life – simulare și structură de date optimizată</h4>
+                <span>2025</span>
+                <ul>
+                    <li>Implementarea algoritmului Game of Life în limbajul C, cu respectarea regulilor de evoluție a celulelor automate.</li>
+                    <li>Construirea unui arbore binar de generații pentru urmărirea simultană a evoluțiilor după două seturi de reguli diferite.</li>
+                    <li>Reutilizarea unei singure structuri de stivă pentru gestiunea nodurilor arborelui, optimizând consumul de memorie.</li>
+                    <li>Proiectarea afișării matricei celulelor prin parcurgere în preordine a arborelui.</li>
+                    <li>Focus pe eficiență computațională și claritate în structura codului.</li>
+                </ul>
+            </div>
+
+            <div class="experience-block">
+                <h4>Arhitectură digitală pe platforme embedded</h4>
+                <span>2024</span>
+                <ul>
+                    <li>Analiză și proiectare sisteme logice digitale.</li>
+                    <li>Implementare, testare și optimizare pentru execuție sigură.</li>
+                </ul>
+            </div>
+            
+
+
+            
+
+            <div class="download-area">
+                <a class="btn" href="cv.html" download="CV_Toderasc_Octavian.html">Descarcă CV</a>
+            </div>
+
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer-links">
+            <a href="https://github.com/Tavi-Tod" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="www.linkedin.com/in/octavian-toderasc-0710152bb" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:tavi.toderasc@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2025 Toderașc Octavian-Gabriel. Toate drepturile rezervate.</p>
+    </footer>
+
+</body>
+</html>

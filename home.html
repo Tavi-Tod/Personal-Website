@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acasă - Prezentare</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Stiluri generale */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1f3c88, #4e7ac7);
+            color: #fff;
+            min-height: 100vh; /* Asigura ca body ocupa tot spatiul */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Bara de navigare */
+        nav {
+            background: #00000066;
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: space-between; /* Schimbat din center pentru a include logo */
+            align-items: center;
+            padding: 18px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-left: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1; /* Permite link-urilor să ocupe spatiul */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 12px;
+            padding: 10px 22px;
+            border-radius: 25px;
+            transition: 0.35s ease;
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #1f3c88;
+        }
+
+        /* Container principal - Flex */
+        .main-content {
+            flex-grow: 1; /* Permite continutului să ocupe spatiul ramas */
+            padding: 50px;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column; /* Structura principala verticala */
+            gap: 40px;
+        }
+
+        /* Stil sectiune intro */
+        .intro-section {
+            display: flex;
+            gap: 25px;
+            align-items: stretch;
+        }
+
+        /* Stil poza */
+        .photo-box {
+            width: 33%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 18px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.25);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition: transform 0.4s ease;
+        }
+
+        .photo-box:hover {
+            transform: scale(1.03);
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        /* Stil biografie */
+        .bio-box {
+            width: 67%;
+            background-color: #ffffff;
+            border-radius: 25px;
+            padding: 35px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.20);
+            color: #222;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(15px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        h1 {
+            margin-top: 0;
+            font-weight: 600;
+            color: #1f3c88;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            text-align: center;
+            padding: 14px 25px;
+            min-width: 165px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            background: #1f3c88;
+            border: none;
+            border-radius: 30px;
+            transition: 0.35s ease;
+        }
+
+        .btn:hover {
+            background: #4e7ac7;
+            transform: translateY(-3px);
+        }
+
+        /* Stil sectiuni education, competences, hobby */
+        .content-sections {
+            display: flex;
+            gap: 25px;
+        }
+
+        .content-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            color: #222;
+            transition: transform 0.4s ease;
+        }
+
+        .content-card h2 {
+            color: #1f3c88;
+            border-bottom: 2px solid #1f3c88;
+            padding-bottom: 5px;
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .content-card ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        .content-card:hover {
+            transform: scale(1.03);
+        }
+        
+        /* Footer */
+        footer {
+            background: #123456;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto; /* Impinge footer-ul jos */
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #4e7ac7;
+        }
+
+        /* Media Queries pentru Responsivitate */
+        /* Aplicat cerintei 14: homepage responsive pe desktop si mobile */
+        @media (max-width: 992px) {
+            .intro-section {
+                flex-direction: column; /* Pe mobile, aseaza elementele pe verticala */
+            }
+
+            .photo-box, .bio-box {
+                width: 100%; /* Ocupa latimea maxima */
+            }
+
+            .content-sections {
+                flex-direction: column; /* Pe mobile, aseaza cardurile pe verticala */
+            }
+
+            .btn-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .logo {
+                margin-left: 0;
+            }
+
+            .nav-links {
+                margin-right: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">O. Toderașc</div>
+        <div class="nav-links">
+            <a href="home.html">Acasă</a>
+            <a href="CV_Toderasc_Octavian.html">CV</a>
+            <a href="portofolio.html">Portofoliu</a> <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+
+        <section class="intro-section">
+            <div class="photo-box">
+                <img src="poza_cv.jpg" alt="Poză profil">
+            </div>
+
+            <div class="bio-box">
+                <h1>Toderașc Octavian-Gabriel</h1>
+                <p>
+                    Student la Facultatea de Automatică și Calculatoare, specializarea Ingineria Sistemelor, cu interes pentru tehnologie, dezvoltare software și sisteme inteligente.
+                </p>
+                <p>
+                    Interesat de aplicațiile moderne ale automatizării, analizelor algoritmice și soluțiilor digitale care contribuie la inovare și eficiență.
+                </p>
+                <p>
+                    Orientat către proiecte tehnice care combină teoria inginerească cu implementarea practică, respectând standardele de calitate și optimizare.
+                </p>
+
+                <div class="btn-container">
+                    <a class="btn" href="CV_Toderasc_Octavian.html">Vezi CV</a>
+                    <a class="btn" href="CV_Toderasc_Octavian.html" download="CV_Toderasc_Octavian.html">Descarcă CV</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-sections">
+            <div class="content-card">
+                <h2>Educație</h2>
+                <ul>
+                    <li><b>Facultatea de Automatică și Calculatoare</b> - Ingineria Sistemelor (2024 - Prezent)</li>
+                    <li><b>Colegiul Național Emil Botta</b> - Matematică Informatică (2020 - 2024)</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2>Competențe</h2>
+                <ul>
+                    <li><b>Programare:</b> C (Avansat), C++ (Avansat), Python (Începător)</li>
+                    <li><b>Web:</b> HTML, CSS (Avansat) - Design responsive</li>
+                    <li><b>Inginerie:</b> Lucru cu microcontrolere, Modelare și simulare sisteme</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2>Hobby</h2>
+                <p>
+                    În timpul liber, sunt pasionat de programare, asamblarea de computere și sport (în special cele în echipă, ce îmi antrenează comunicarea și munca în echipă).
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://github.com/Tavi-Tod" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="www.linkedin.com/in/octavian-toderasc-0710152bb" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:tavi.toderasc@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2025 Toderașc Octavian-Gabriel. Toate drepturile rezervate.</p>
+    </footer>
+
+</body>
+</html>
