@@ -89,6 +89,15 @@
             align-items: center;
             gap: 10px;
         }
+        h3 {
+    font-size: 18px;          
+    margin-top: 25px;          
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white; 
+}
 
         ul {
             list-style: none;
@@ -253,13 +262,24 @@
 
             <h2><i class="fa-solid fa-code icon"></i>Competențe</h2>
             <ul>
-                <li>C: Nivel avansat</li>
-                <li>C++: Nivel avansat</li>
-                <li>Python: Nivel începător</li>
-                <li>HTML, CSS: Nivel avansat</li>
-                <li>Modelare și simulare sisteme</li>
-                <li>Lucru cu microcontrolere embedded</li>
-                <li>AI și Securitate Cibernetică</li>
+                <h3>Limbaje de programare:</h3>
+                    <li>C/C++ (Nivel avansat, OOP, STL)</li>
+                    <li>JavaScript (ES6+, Asincron)</li>
+                    <li>SQL (MySQL)</li>
+                    <li>Python (Nivel Începător)</li>
+                <h3>Dezvoltare Backend și sisteme:</h3>
+                    <li>Multi Backend Architecture (Node.js & C++)</li>
+                    <li>REST API Design</li>
+                    <li>Crow Framework (C++ Web Server)</li>
+                    <li>Node.js & Express</li>
+                <h3>Frontend & Web:</h3>
+                    <li>HTML5, CSS3 (Responsive)</li>
+                    <li>DOM Manipulation, Fetch API</li>
+                <h3>Unelte & Inginerie:</h3>
+                    <li>Git & Version Control</li>
+                    <li>MySQL Workbench</li>
+                    <li>Matlab</li>
+                    <li>Ubuntu Terminal</li>
             </ul>
 
             <h2><i class="fa-solid fa-language icon"></i>Limbi</h2>
@@ -282,6 +302,17 @@
             </p>
 
             <div class="section-title"><i class="fa-solid fa-briefcase icon"></i>Experiență și Proiecte</div>
+
+            <div class="experience-block">
+                <h4>PURPL3 – Sistem Bancar Full Stack</h4>
+                <span>2025</span>
+                <ul>
+                    <li>Proiectarea unei arhitecturi modulare Client-Server, permițând decuplarea completă a Frontend-ului de Backend prin intermediul unui REST API standardizat.</li>
+                    <li>Implementarea logicii server-side în două variante distincte pentru analiză comparativă: o versiune de înaltă performanță în C++ (folosind Crow) și o versiune orientată pe scalabilitate în Node.js (Express).</li>
+                    <li>Gestionarea persistenței datelor într-o bază de date MySQL, asigurând consistența tranzacțiilor financiare indiferent de serverul utilizat.</li>
+                    <li>Colaborarea în echipă pentru definirea specificațiilor API, permițând interschimbarea transparentă a backend-urilor fără modificări în codul client (Frontend).</li>
+                </ul>
+            </div>
 
             <div class="experience-block">
                 <h4>Dungeon Chronicles – Motor RPG C++ cu execuție WebAssembly</h4>
